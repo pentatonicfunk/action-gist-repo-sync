@@ -26,12 +26,12 @@ This repo files synced to https://gist.github.com/pentatonicfunk/f161bf31b049303
 ### Prep work
 
 1. Create a gist (public or secret) if you don't have one.
-1. Generate a new [Personal access token](https://github.com/settings/tokens/). Only the `gist` scope is needed.
+2. Generate a new [Personal access token](https://github.com/settings/tokens/). Only the `gist` scope is needed.
 
 ### Project setup
 
-1. Go to the repo **Settings > Secrets**. Add the generated token with name `TOKEN`.
-1. Edit workflow file `.github/workflows/deploy.yml` as the example above.
+1. Go to the repo **Settings > Secrets**. Add the generated token with name `GIST_TOKEN`.
+2. Edit workflow file `.github/workflows/deploy.yml` as the example above.
 
 ### Options
 
