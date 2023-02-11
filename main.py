@@ -9,9 +9,6 @@ if __name__ == '__main__':
     path = os.environ['INPUT_SOURCE_PATH']
     token = os.environ['INPUT_GIST_TOKEN']
 
-    print(json.dumps(os.environ, indent=4))
-    exit(0)
-
     # checking source
     if not os.path.isdir(path):
         raise ValueError(f'Invalid source path. {path} is not directory.')
@@ -103,7 +100,7 @@ if __name__ == '__main__':
         if len(source_files):
             gist_repo.index.add(source_files)
 
-        gist_repo.index.commit('Sync from repo.')
+        gist_repo.index.commit(f'Sync from repo by {os.environ["GITHUB_ACTOR"]}, ref: {os.environ["GITHUB_REF"]}.')
         gist_repo.remotes.origin.push()
 
         print(f'Pushed changes to Gist repo.')

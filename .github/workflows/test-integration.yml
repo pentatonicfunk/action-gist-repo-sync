@@ -9,5 +9,5 @@ jobs:
       - name: Run The action
         uses: ./
         with:
-          gist_id: 123
-          gist_token: 123
+          gist_id: f161bf31b0493032bd23c6ef60ef5353
+          gist_token: ${{ secrets.GIST_TOKEN }}
