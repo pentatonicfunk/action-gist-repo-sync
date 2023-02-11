@@ -11,7 +11,8 @@ This repo files synced to https://gist.github.com/pentatonicfunk/f161bf31b049303
 ## Quick start
 
 ```yml
-- uses: actions/checkout@v3
+- name: Checkout
+  uses: actions/checkout@v1
 - name: Gist Repo Sync
   uses: pentatonicfunk/action-gist-repo-sync@v1
   with:
