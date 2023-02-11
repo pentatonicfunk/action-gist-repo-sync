@@ -50,4 +50,4 @@ Relative to the current repo's root directory, e.g. `dist-docs`. Default the rep
 ## License
 
 [MIT License](https://github.com/pentatonicfunk/action-gist-repo-sync/blob/main/LICENSE) ©
-[pentatotnicfunk](https://github.com/pentatonicfunk)
+[pentatonicfunk](https://github.com/pentatonicfunk)
