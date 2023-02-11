@@ -1,5 +1,8 @@
 name: 'Gist Repo Sync'
 description: 'Sync your gist with your repo. Support multiple files'
+branding:
+  icon: 'book'
+  color: 'purple'
 inputs:
   gist_token: # available as INPUT_GIST_TOKEN
     description: 'Personal Access Token, with Gist write granted.'
