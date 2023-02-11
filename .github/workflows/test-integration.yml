@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run Action
+      - name: Run The action
         uses: ./
         with:
           gist_id: 123
