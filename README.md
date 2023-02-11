@@ -4,6 +4,10 @@
 
 This is a Github Action to sync Github Repo to Github Gist.
 
+## Demo
+
+This repo files synced to https://gist.github.com/pentatonicfunk/f161bf31b0493032bd23c6ef60ef5353
+
 ## Quick start
 
 ```yml
