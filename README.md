@@ -2,11 +2,12 @@
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/pentatonicfunk/action-gist-repo-sync.svg)](https://github.com/pentatonicfunk/action-gist-repo-sync/releases)
 
-This is a Github Action to sync Github Repo to Github Gist.
+This is a GitHub Action to sync GitHub Repo to GitHub Gist.
 
-## Demo
+## Demos
 
-This repo files synced to https://gist.github.com/pentatonicfunk/f161bf31b0493032bd23c6ef60ef5353
+- This repo files synced to https://gist.github.com/pentatonicfunk/f161bf31b0493032bd23c6ef60ef5353
+- Real life GitHub Repo Sample: https://github.com/pentatonicfunk/test-sync-gist
 
 ## Quick start
 
@@ -41,7 +42,7 @@ Personal access token for updating gist.
 
 #### `gist_id`
 
-Id portion from the gist url, e.g. `https://gist.github.com/pentatonicfunk/`**`867f66a0f25f9d4ca70adf1cf1944529`**.
+ID portion from the gist url, e.g. `https://gist.github.com/pentatonicfunk/`**`867f66a0f25f9d4ca70adf1cf1944529`**.
 
 #### `source_path` (optional)
 
