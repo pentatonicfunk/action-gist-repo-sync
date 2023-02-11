@@ -1,0 +1,16 @@
+name: 'Gist Repo Sync'
+description: 'Sync your gist with your repo. Support multiple files'
+inputs:
+  gist_token: # available as INPUT_GIST_TOKEN
+    description: 'Personal Access Token, with Gist write granted.'
+    required: true
+  gist_id: # available as INPUT_GIST_ID
+    description: 'ID of the Gist to be synced / updated.'
+    required: true
+  source_path: # available as INPUT_SOURCE_PATH
+    description: 'Source path to sync. Optional, default is current directory'
+    required: false
+    default: './'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

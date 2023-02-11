@@ -1,0 +1,13 @@
+name: Test Integration Workflow
+on: push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Action
+        uses: ./
+        with:
+          gist_id: 123
+          gist_token: 123
