@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import typing_extensions
 import git
 
 if __name__ == '__main__':

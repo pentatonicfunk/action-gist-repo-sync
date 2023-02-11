@@ -1,7 +1,7 @@
 name: Test Integration Workflow
 on: push
 jobs:
-  first-job:
+  test-integration:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
