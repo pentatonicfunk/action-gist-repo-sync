@@ -27,14 +27,12 @@ if __name__ == '__main__':
             continue
         source_files.append(file)
 
-    source_files_content = {}
     # prepare files content
     for file in source_files:
         try:
             # with utf-8, to avoid binary files
             with open(os.path.join(path, file), 'r', encoding='utf-8') as f:
                 content = f.read()
-                source_files_content[file] = content
         # all exception
         except Exception:
             source_skipped['non_text_or_unreadable'].append(file)
@@ -82,6 +80,7 @@ if __name__ == '__main__':
             if os.path.isfile(os.path.join(gist_git_dir, file)):
                 os.remove(os.path.join(gist_git_dir, file))
             shutil.copy(os.path.join(path, file), os.path.join(gist_git_dir, file), follow_symlinks=False)
+            print(f'Copied {file}')
 
         gist_repo = git.Repo(gist_git_dir)
 
@@ -89,16 +88,16 @@ if __name__ == '__main__':
             git_config.set_value('user', 'email', os.environ['GITHUB_ACTOR'])
             git_config.set_value('user', 'name', f'{os.environ["GITHUB_ACTOR"]}@users.noreply.github.com')
 
-        # no changes detected, get out with "success-ish"
-        if not gist_repo.is_dirty():
-            print(f'No changes detected in Gist repo.')
-            exit(0)
-
         if len(removed_files):
             gist_repo.index.remove(removed_files)
 
         if len(source_files):
             gist_repo.index.add(source_files)
+
+        # no changes detected, get out with "success-ish"
+        if not gist_repo.is_dirty():
+            print(f'No changes detected in Gist repo.')
+            exit(0)
 
         gist_repo.index.commit(f'Sync from repo by {os.environ["GITHUB_ACTOR"]}, ref: {os.environ["GITHUB_REF"]}.')
         gist_repo.remotes.origin.push()
